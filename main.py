@@ -32,11 +32,13 @@ if Hello.yes_no() == 'так':
             looser = second_fiter
             challengers.remove(second_fiter)
         sleep(3)
-        print(f'Вітаємо переможця поєдинку, це {winner.name}! Він іде відновлювати сили під ваші оплески.')
+
         if len(challengers) == 1:
-            print(f'{looser.name} нажаль вибуває, це кінець.')
+            print(f'Вітаємо переможця поєдинку, це {winner.name}! Він стоїть весь в крові, але посміхається.\n'
+                  f'{looser.name} нажаль вибуває, це кінець.')
         else:
-            print(f'{looser.name} нажаль вибуває, приберіть арену для наступного поєдинку.')
+            print(f'Вітаємо переможця поєдинку, це {winner.name}! Він іде відновлювати сили під ваші оплески.\n'
+                  f'{looser.name} нажаль вибуває, приберіть арену для наступного поєдинку.')
         fight_round += 1
         if winner.name == knight.name:
             knight.health, knight.armor, knight.power = 50, 25, 20
