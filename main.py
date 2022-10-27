@@ -8,8 +8,6 @@ if Hello.yes_no() == 'так':
     print('\nНехай Королівська битва почнеться!\n')
     fight_round = 1
     while len(challengers) > 1:
-        sleep(3)
-        print('Приберіть арену!\n')
         sleep(2)
         print(f'На арену виходить {len(challengers)} участників')
         sleep(3)
