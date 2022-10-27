@@ -41,15 +41,15 @@ if Hello.yes_no() == 'так':
                   f'{looser.name} нажаль вибуває, приберіть арену для наступного поєдинку.')
         fight_round += 1
         if winner.name == knight.name:
-            knight.health, knight.armor, knight.power = 50, 25, 20
+            knight.health, knight.armor, knight.power = knight_stats
         elif winner.name == rascal.name:
-            rascal.health, rascal.armor, rascal.power = 20, 5, 5
+            rascal.health, rascal.armor, rascal.power = rascal_stats
         elif winner.name == hunter.name:
-            hunter.health, hunter.armor, hunter.power = 80, 10, 15
+            hunter.health, hunter.armor, hunter.power = hunter_stats
         elif winner.name == assassin.name:
-            assassin.health, assassin.armor, assassin.power = 70, 3, 20
+            assassin.health, assassin.armor, assassin.power = assassin_stats
         elif winner.name == mage.name:
-            mage.health, mage.armor, mage.power = 100, 0, 16
+            mage.health, mage.armor, mage.power = mage_stats
     print(f'Королівська битва завершена, вітаємо переможця - {winner.name}!')
 else:
     Hello.bye()
