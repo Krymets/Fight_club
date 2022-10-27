@@ -19,13 +19,13 @@ class Hero(ABC):
         while self.health and enemy.health > 0:
             self.atack(enemy)
             if enemy.health <= 0:
-                print(enemy.name, 'пав у цьому нелегкому бою!\n')
+                print(enemy.name, 'програв у цьому нелегкому бою!\n')
                 break
             sleep(5)
 
             enemy.atack(self)
             if self.health <= 0:
-                print(self.name, 'пав у цьому нелегкому бою!\n')
+                print(self.name, 'програв у цьому нелегкому бою!\n')
                 break
             sleep(5)
 
@@ -36,6 +36,35 @@ class Hero(ABC):
         if enemy.armor == 0:
             enemy.health -= self.power
             print(f'{enemy.name} отримав {self.power} урону.\nРівень здоров\'я падає до ' + str(enemy.health) + '\n')
+        else:
+            enemy.armor -= self.power
+            if enemy.armor < 0:
+                enemy.health += enemy.armor
+                enemy.armor = 0
+            print(
+                enemy.name + ' покачнувся(-ась).\nКлас броні впав до ' +
+                str(enemy.armor) + ', а рівень здоров\'я до ' + str(enemy.health) + '\n')
+
+    def balance_battle(self, enemy):
+        while self.health and enemy.health > 0:
+            self.balance_atack(enemy)
+            if enemy.health <= 0:
+                print(enemy.name, 'програв у цьому нелегкому бою!\n')
+                break
+
+            enemy.balance_atack(self)
+            if self.health <= 0:
+                print(self.name, 'програв у цьому нелегкому бою!\n')
+                break
+
+    def balance_atack(self, enemy):
+        print(
+            '-> УДАР! ' + self.name + ' атакує ' + enemy.name
+            + ' з силою ' + str(self.power) + ', використовуючи ' + self.weapon + '\n')
+        if enemy.armor == 0:
+            enemy.health -= self.power
+            print(
+                f'{enemy.name} отримав {self.power} урону.\nРівень здоров\'я падає до ' + str(enemy.health) + '\n')
         else:
             enemy.armor -= self.power
             if enemy.armor < 0:
