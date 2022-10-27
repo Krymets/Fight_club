@@ -10,7 +10,7 @@ class Hunter(Hero):
         return f"З'являється {self.name}, з тушею кабана на плечі, із-за спини виглядає {self.weapon}\n"
 
     def atack(self, enemy):
-        print(f'>>> [Постріл] {self.name} сильно натягує тятиву свого {self.weapon}а та '
+        print(f'>>> [ПОСТРІЛ] {self.name} сильно натягує тятиву свого {self.weapon}а та '
               f'випускає стрілу у напрямку {enemy.name}\n')
         if enemy.armor == 0:
             enemy.health -= self.power
