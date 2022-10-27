@@ -11,7 +11,7 @@ class Rascal(Hero):
                f"у напрямку судей\n"
 
     def atack(self, enemy):
-        print(f'>>> [УДАР] {self.name} замахується і ріже обличчя {enemy.name} своїм {self.weapon}ем \n')
+        print(f'>>> [УДАР] {self.name} замахується і ріже обличчя {enemy.name} використовуючи свій {self.weapon} \n')
         if enemy.armor == 0:
             enemy.health -= self.power
             print(f'{enemy.name} корчиться від болю, він отримав {self.power} урону.\nРівень здоров\'я падає '
