@@ -10,7 +10,7 @@ class Mage(Hero):
         return f"Раптово з\'являється {self.name}, з {self.weapon}ом за спиною\n"
 
     def atack(self, enemy):
-        print(f'-> ЗАКЛЯТТЯ! {self.name} проклинає {enemy.name} і б\'є {self.weapon}ом на {self.power}\n')
+        print(f'>>> [ЗАКЛЯТТЯ] {self.name} проклинає {enemy.name} і б\'є {self.weapon}ом на {self.power}\n')
         if enemy.armor == 0:
             enemy.health -= self.power
             print(f'{enemy.name} отримав {self.power} урону.\nРівень здоров\'я падає до ' + str(enemy.health) + '\n')
