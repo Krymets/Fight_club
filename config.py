@@ -5,10 +5,10 @@ from hero_classes_pack.class_mage import Mage
 from hero_classes_pack.class_rascal import Rascal
 
 knight_stats = 50, 25, 16
-rascal_stats = 50, 25, 16
-hunter_stats = 50, 25, 16
-assassin_stats = 50, 25, 16
-mage_stats = 50, 25, 16
+rascal_stats = 95, 5, 11
+hunter_stats = 67, 10, 15
+assassin_stats = 65, 3, 16
+mage_stats = 81, 0, 13
 
 knight = Knight('Лицар Річард "Гострий меч"', knight_stats[0], knight_stats[1], knight_stats[2], 'меч')
 rascal = Rascal('Пройдисвіт Петро "Підступний ніж"', rascal_stats[0], rascal_stats[1], rascal_stats[2], 'ніж')
