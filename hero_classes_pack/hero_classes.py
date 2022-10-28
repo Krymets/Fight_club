@@ -33,7 +33,7 @@ class Hero(ABC):
         print(
             '-> УДАР! ' + self.name + ' атакує ' + enemy.name
             + ' з силою ' + str(self.power) + ', використовуючи ' + self.weapon + '\n')
-        if enemy.armor == 0:
+        if not enemy.armor:
             enemy.health -= self.power
             print(f'{enemy.name} отримав {self.power} урону.\nРівень здоров\'я падає до ' + str(enemy.health) + '\n')
         else:

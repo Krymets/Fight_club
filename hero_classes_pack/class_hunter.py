@@ -12,7 +12,7 @@ class Hunter(Hero):
     def atack(self, enemy):
         print(f'>>> [ПОСТРІЛ] {self.name} сильно натягує тятиву свого {self.weapon}а та '
               f'випускає стрілу у напрямку {enemy.name}\n')
-        if enemy.armor == 0:
+        if not enemy.armor:
             enemy.health -= self.power
             print(f'Стріла влучає в {enemy.name} та наносить {self.power} урону.\nРівень здоров\'я падає '
                   f'до {enemy.health}\n')

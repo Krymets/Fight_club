@@ -11,7 +11,7 @@ class Assassin(Hero):
 
     def atack(self, enemy):
         print(f'>>> [БРОСОК] {self.name} робить випад і кидає {self.weapon} в {enemy.name}\n')
-        if enemy.armor == 0:
+        if not enemy.armor:
             enemy.health -= self.power
             print(f'{enemy.name} отримав {self.power} урону.\nРівень здоров\'я падає до ' + str(enemy.health) + '\n')
         else:

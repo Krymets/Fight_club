@@ -11,7 +11,7 @@ class Mage(Hero):
 
     def atack(self, enemy):
         print(f'>>> [ЗАКЛЯТТЯ] {self.name} проклинає {enemy.name} і б\'є {self.weapon}ом на {self.power}\n')
-        if enemy.armor == 0:
+        if not enemy.armor:
             enemy.health -= self.power
             print(f'{enemy.name} отримав {self.power} урону.\nРівень здоров\'я падає до ' + str(enemy.health) + '\n')
         else:

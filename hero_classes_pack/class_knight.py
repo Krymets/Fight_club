@@ -11,7 +11,7 @@ class Knight(Hero):
 
     def atack(self, enemy):
         print(f'>>> [УДАР] Хоробрий воїн {self.name} атакує {enemy.name} {self.weapon}ем з силою {self.power}\n')
-        if enemy.armor == 0:
+        if not enemy.armor:
             enemy.health -= self.power
             print(f'{enemy.name} отримав {self.power} урону.\nРівень здоров\'я падає до ' + str(enemy.health) + '\n')
         else:
